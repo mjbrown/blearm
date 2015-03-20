@@ -13,7 +13,6 @@
     <port index="1" tristatemask="0" pull="down" />
     <port index="2" tristatemask="0" pull="down" />
     <usb enable="true" endpoint="api" />
-	<usart channel="0" baud="115200" alternate="2" endpoint="api" mode="packet" flow="false" />
 	<usart channel="1" baud="115200" alternate="1" endpoint="none" mode="spi_master" polarity="negative" phase="1" endianness="msb" />
 	<timer_ticks speed="7" />
 	<timer index="1" enabled_channels="0x1B" divisor="2" mode="2" alternate="2" />
