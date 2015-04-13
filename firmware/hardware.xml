@@ -9,12 +9,12 @@
 	<wakeup_pin enable="false" port="0" pin="0" state="up" />
 	<host_wakeup_pin enable="false" port="0" pin="1" state="up" />
     <txpower power="15" bias="5" />
-    <port index="0" tristatemask="0" pull="down" />
+    <port index="0" tristatemask="0" pull="up" />
     <port index="1" tristatemask="0" pull="down" />
     <port index="2" tristatemask="0" pull="down" />
     <usb enable="true" endpoint="api" />
-	<usart channel="1" baud="115200" alternate="1" endpoint="none" mode="spi_master" polarity="negative" phase="1" endianness="msb" />
-	<timer_ticks speed="7" />
-	<timer index="1" enabled_channels="0x1B" divisor="2" mode="2" alternate="2" />
+	<usart channel="1" baud="115200" alternate="1" endpoint="none" mode="spi_master" polarity="negative" phase="1" endianness="lsb" />
+	<timer_ticks speed="3" />
+	<timer index="1" enabled_channels="0x1B" divisor="0" mode="1" alternate="2" />
 	
 </hardware>
