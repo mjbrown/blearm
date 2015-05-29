@@ -12,10 +12,11 @@
     <port index="0" tristatemask="0" pull="up" />
     <port index="1" tristatemask="0" pull="down" />
     <port index="2" tristatemask="0" pull="down" />
-    <usb enable="true" endpoint="api" />
+    <usb enable="false"/>
 	<usart channel="1" baud="115200" alternate="1" endpoint="none" mode="spi_master" polarity="negative" phase="1" endianness="lsb" />
 	<timer_ticks speed="4" />
 	<timer index="1" enabled_channels="0x1B" divisor="0" mode="1" alternate="2" />
 	<timer index="3" enabled_channels="0x03" divisor="7" mode="0" alternate="2" />
 	<timer index="4" enabled_channels="0x01" divisor="7" mode="0" alternate="2" />
+    <script enable="true" />
 </hardware>

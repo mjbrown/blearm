@@ -5,49 +5,50 @@
       <description>Generic Access Profile</description>
       <characteristic uuid="2a00">
         <properties read="true" const="true" />
-        <value>BLE-PiHAT</value>
+        <value>Michael's Robotic Arm</value>
       </characteristic>
       <characteristic uuid="2a01">
         <properties read="true" const="true" />
         <value type="hex">8000</value>
       </characteristic>
     </service>
-    <service uuid="00000000-0000-F000-F000-F00000000000" type="primary" advertise="true">
-        <description>SSID/PSK WiFi Configuration Control</description>
-        <characteristic uuid="00010000-0000-F000-F000-F00000000000">
-            <description>Actions</description>
-            <properties write="true" />
-            <value type="hex" variable_length="true" length="20" />
+    <service uuid="10010001-1001-1001-1001-109876543210" type="primary" advertise="true">
+        <description>Robot Arm Control Service</description>
+
+        <characteristic uuid="10010002-1001-1001-1001-109876543210">
+            <description>Rotation</description>
+            <properties read="true" write="true"/>
+            <value type="hex" length="2"/>
         </characteristic>
-        <characteristic uuid="00020000-0000-F000-F000-F00000000000">
-            <description>SSID</description>
-            <properties read="true" write="true" />
-            <value variable_length="true" length="20"/>
+
+        <characteristic uuid="10010003-1001-1001-1001-109876543210">
+            <description>Wrist</description>
+            <properties read="true" write="true"/>
+            <value type="hex" length="2"/>
         </characteristic>
-        <characteristic uuid="00030000-0000-F000-F000-F00000000000">
-            <description>Passkey</description>
-            <properties write="true" />
-            <value type="utf-8" variable_length="true" length="20"/>
+
+        <characteristic uuid="10010004-1001-1001-1001-109876543210">
+            <description>Elbow</description>
+            <properties read="true" write="true"/>
+            <value type="hex" length="2"/>
         </characteristic>
-        <characteristic uuid="00040000-0000-F000-F000-F00000000000">
-            <description>Username</description>
-            <properties write="true" authenticated_write="true" />
-            <value type="utf-8" variable_length="true" length="20" />
+
+        <characteristic uuid="10010005-1001-1001-1001-109876543210">
+            <description>Gripper</description>
+            <properties read="true" write="true"/>
+            <value type="hex" length="2"/>
         </characteristic>
-        <characteristic uuid="00050000-0000-F000-F000-F00000000000">
-            <description>Password</description>
-            <properties write="true" authenticated_write="true" />
-            <value type="utf-8" variable_length="true" length="20" />
+
+        <characteristic uuid="10010006-1001-1001-1001-109876543210">
+            <description>Base Track</description>
+            <properties read="true" write="true"/>
+            <value type="hex" length="2"/>
         </characteristic>
-        <characteristic uuid="00060000-0000-F000-F000-F00000000000">
-            <description>Wired IP Address</description>
-            <properties read="true" indicate="true" />
-            <value type="utf-8" variable_length="true" length="20" />
-        </characteristic>
-        <characteristic uuid="00070000-0000-F000-F000-F00000000000">
-            <description>Wireless IP Address</description>
-            <properties read="true" indicate="true" />
-            <value type="utf-8" variable_length="true" length="20"/>
+
+        <characteristic uuid="10010007-1001-1001-1001-109876543210">
+            <description>Horizontal Track</description>
+            <properties read="true" write="true"/>
+            <value type="hex" length="2"/>
         </characteristic>
     </service>
 </configuration>
